@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@drawable/back"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/txtheading"
+            app:layout_constraintEnd_toStartOf="@+id/txtheading"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toTopOf="@id/txtheading" />
+
+        <TextView
+            android:id="@+id/txtheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30ssp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:gravity="center"
+            android:paddingRight="@dimen/_55sdp"
+            android:text="Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="@id/header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imgBack"
+            app:layout_constraintTop_toTopOf="@id/header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scr_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:layout_marginBottom="@dimen/_55sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctr_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgproduct"
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_1"
+                app:layout_constraintBottom_toTopOf="@id/txtName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgSpeaker"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/mute"
+                app:layout_constraintBottom_toBottomOf="@+id/imgproduct"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="bottom|center_horizontal"
+                android:text="Watermelon"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                app:layout_constraintBottom_toTopOf="@id/txtDisc"
+                app:layout_constraintEnd_toStartOf="@id/txtRating"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgproduct" />
+
+            <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="🌟 4.8 (255 Reviews)"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_13sdp"
+                android:typeface="serif"
+                app:layout_constraintBottom_toBottomOf="@id/txtName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtName"
+                app:layout_constraintTop_toTopOf="@id/txtName" />
+
+            <TextView
+                android:id="@+id/txtDisc"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="Watermelon vines are thin, grooved and covered in tiny hairs. Vines are branching and possess deeply lobed pinnate leaves. The plant produces solitary yellow flowers and and a large spherical to oblong fruit. The fruit is a 'pepo' - a fleshy fruit protected by a thick leathery rind."
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtName" />
+
+            <TextView
+                android:id="@+id/txtSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Size"
+                android:typeface="serif"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDisc"
+                app:layout_constraintEnd_toStartOf="@id/txtPlant"/>
+
+            <TextView
+                android:id="@+id/txtPlant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Plant"
+                android:typeface="serif"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toEndOf="@id/txtSize"
+                app:layout_constraintTop_toTopOf="@id/txtSize"
+                app:layout_constraintEnd_toStartOf="@id/txtHeight"
+                app:layout_constraintBottom_toBottomOf="@id/txtSize"/>
+
+            <TextView
+                android:id="@+id/txtHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Height"
+                android:typeface="serif"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toStartOf="@id/txtHumidity"
+                app:layout_constraintStart_toEndOf="@id/txtPlant"
+                app:layout_constraintTop_toTopOf="@id/txtPlant"
+                app:layout_constraintBottom_toBottomOf="@id/txtPlant"/>
+
+            <TextView
+                android:id="@+id/txtHumidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Humidity"
+                android:typeface="serif"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@id/txtHeight"
+                app:layout_constraintTop_toTopOf="@id/txtHeight"
+                app:layout_constraintBottom_toBottomOf="@id/txtHeight"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtDetailSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Medium"
+                android:typeface="serif"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSize"
+                app:layout_constraintEnd_toStartOf="@id/txtDetailPlant"/>
+
+            <TextView
+                android:id="@+id/txtDetailPlant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Orchid"
+                android:typeface="serif"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/txtDetailSize"
+                app:layout_constraintTop_toTopOf="@id/txtDetailSize"
+                app:layout_constraintEnd_toStartOf="@id/txtDetailHeight"
+                app:layout_constraintBottom_toBottomOf="@id/txtDetailSize"/>
+
+            <TextView
+                android:id="@+id/txtDetailHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="12.6''"
+                android:typeface="serif"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toStartOf="@id/txtDetailHumidity"
+                app:layout_constraintStart_toEndOf="@id/txtDetailPlant"
+                app:layout_constraintTop_toTopOf="@id/txtDetailPlant"
+                app:layout_constraintBottom_toBottomOf="@id/txtDetailPlant"/>
+
+            <TextView
+                android:id="@+id/txtDetailHumidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="82%"
+                android:typeface="serif"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@id/txtDetailHeight"
+                app:layout_constraintTop_toTopOf="@id/txtDetailHeight"
+                app:layout_constraintBottom_toBottomOf="@id/txtDetailHeight"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_14sdp"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@id/scr_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtDetailPrice"
+        />
+
+    <TextView
+        android:id="@+id/txtDetailPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$235"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/txtPrice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtPrice"
+       />
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="Checkout"
+        android:textColor="@color/white"
+        android:background="@drawable/round_corner"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_70sdp"
+        android:paddingLeft="@dimen/_50sdp"
+        android:paddingRight="@dimen/_50sdp"
+        android:letterSpacing="0.2"
+        app:layout_constraintStart_toEndOf="@id/txtDetailPrice"
+        app:layout_constraintBottom_toBottomOf="@id/txtDetailPrice"
+        app:layout_constraintTop_toTopOf="@id/txtPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

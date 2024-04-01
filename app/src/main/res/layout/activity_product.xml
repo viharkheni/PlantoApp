@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ProductActivity">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/header"
+           android:layout_width="match_parent"
+           android:layout_height="?actionBarSize"
+           android:background="@drawable/header"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+
+              <ImageView
+                  android:id="@+id/back"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/_5sdp"
+                  android:background="@drawable/back"
+                  android:clickable="true"
+                  android:focusable="true"
+                  app:layout_constraintBottom_toBottomOf="@id/txtheading"
+                  app:layout_constraintEnd_toStartOf="@+id/txtheading"
+                  app:layout_constraintStart_toStartOf="@+id/header"
+                  app:layout_constraintTop_toTopOf="@id/txtheading" />
+
+              <TextView
+                  android:id="@+id/txtheading"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/_30ssp"
+                  android:layout_marginLeft="@dimen/_10sdp"
+                  android:text="Products"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/_18ssp"
+                  android:textStyle="bold"
+                  android:typeface="serif"
+                  app:layout_constraintBottom_toBottomOf="@id/header"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="@+id/back"
+                  app:layout_constraintTop_toTopOf="@id/header" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerplant"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_marginLeft="@dimen/_5sdp"
+           android:layout_marginRight="@dimen/_5sdp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.461"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/header"
+           app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
